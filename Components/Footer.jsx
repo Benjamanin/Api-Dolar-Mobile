@@ -1,5 +1,5 @@
 import { View, Text, FlatList } from "react-native";
-import Footerstyles from "./Styles/StyleFooter";
+import Footerstyles from "./styles/StyleFooter";
 
 const data = [
     {id: 1, title: "Paso 1", description: "Elige la moneda que deseas convertir a pesos chilenos.", subtitle: "Selecciona la divisa." },

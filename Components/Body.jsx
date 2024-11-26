@@ -1,4 +1,4 @@
-import Bodystyles from "./Styles/StyleBody";
+import Bodystyles from "./styles/StyleBody";
 import { View, Text, TextInput, Button } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
 import React, { useState } from "react";

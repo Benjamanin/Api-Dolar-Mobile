@@ -1,4 +1,4 @@
-import HeaderStyles from './Styles/StyleHeader';
+import HeaderStyles from './styles/StyleHeader';
 import { Text, View } from 'react-native';
 
 
