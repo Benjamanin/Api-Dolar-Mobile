@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; 
-import { View, TextInput, StyleSheet, Text, Image } from 'react-native';
+import { View, TextInput, StyleSheet, Text, Image, Button, TouchableOpacity, Text as RNText } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import Subtitulos from './Subtitulos';
 import dolar from '../icons/dolar.png';
@@ -7,6 +7,9 @@ import dolar from '../icons/dolar.png';
 export default function Cambio() {
   const [text, setText] = useState(''); // Para controlar el texto ingresado
   const [selectedValue, setSelectedValue] = useState("java"); // Usado para controlar el valor seleccionado en el Picker
+  const handlePress = () => {
+    alert('¡Hola!');
+  };
 
   return (
     // Añade un View para contener los elementos
@@ -55,15 +58,43 @@ export default function Cambio() {
         </View>
         {/* Estos son componentes falsos para mostrar las conversiones. */}
 
-        {/* TRABAJAR AL MEDIO DIA EN ESTO */}
+  
         {/* Ultimo Cierre y Boton convertir. */}
+        <Text>
+          {"\n"}
+        </Text>
+        <Subtitulos parametro={"Último Cierre"} />
 
+        <View style={styles.UltimoCierreBoton}>
+
+          {/* Texto de Ultimo Cierre del valor de la divisa. Resive un parametro de la Api en el monto. */}
+          <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
+          $ <Text style={{ color: '#26b99a' }}>76567</Text> CLP
+          </Text>
+
+        {/* Boton para Convertir divisas. */}
+          <TouchableOpacity 
+            onPress={handlePress} 
+            style={[styles.BotonConvertir, { borderRadius: 18 }]} 
+          >
+            <RNText style={{ color: '#228de9', fontWeight: 'bold', textAlign: 'center' }}>Convertir</RNText>
+          </TouchableOpacity>
+
+        </View>
 
         {/* Ultimo Cierre y Boton Convertir. */}
 
         {/* Fecha de Actualización. */}
+        <Subtitulos parametro={"Fecha de Actualización"} />
 
+        <View style={styles.UltimoCierreBoton}>
 
+          {/* Fecha Actualización del valor de la divisa. Resive un parametro de la Api en el monto. */}
+          <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
+          $ <Text style={{ color: '#26b99a' }}>76567</Text> CLP
+          </Text>
+
+        </View>
         {/* Fecha de Actualización. */}
 
     </View>
@@ -127,8 +158,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center', 
     marginBottom: 5, 
-    borderWidth: 1,  // Añade borde para visibilidad
-    borderColor: 'gray',  // Color del borde
+    
+    
     alignSelf: 'center',  // Centra el Picker
     color: 'black',  // Color de texto para los items
     paddingVertical: 10,
@@ -165,4 +196,29 @@ const styles = StyleSheet.create({
     resizeMode: 'contain', 
     marginHorizontal: 3,
 },
+
+BotonConvertir: {
+  width: '36%',
+  height: 55,
+  borderColor: '#228de9', // Color del borde
+  alignItems: 'center', // Alinear elementos al centro
+  justifyContent: 'center', // Alinear elementos al centro
+  borderWidth: 2, // Grosor del borde
+  padding: 10,
+  backgroundColor: 'transparent', // Fondo transparente
+},
+
+UltimoCierreBoton: {
+  borderWidth: 2,
+  borderColor: 'transparent',
+  borderRadius: 15,
+  alignItems: 'center', 
+  marginTop: 10,
+  margin: 20,
+  flexDirection: 'row', 
+  height: 55,
+  justifyContent: 'space-between'
+},
+
+
 });
