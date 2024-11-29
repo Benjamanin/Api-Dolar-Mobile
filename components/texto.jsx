@@ -6,7 +6,6 @@ export default function Texto() {
         <View
         style={styles.container}
         >
-
             <Text>Texto</Text>
 
         </View>

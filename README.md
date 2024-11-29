@@ -11,10 +11,13 @@ Este proyecto fue creado con [Expo](https://expo.dev) usando [`create-expo-app`]
 ```bash
 npm install
 ```
-### 2️⃣ Instala expo-router:
+### 2️⃣ Instala Librerias:
 
    ```bash
     npm install expo-router
+
+    npm install @react-native-picker/picker
+
    ```
 
 ### 3️⃣ Inicia la aplicación:

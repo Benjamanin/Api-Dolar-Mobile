@@ -1,12 +1,15 @@
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import React from 'react';
 import Texto from '../components/texto';
+import Cambio from '../components/cambio';
 
-export default function home() {
+export default function Home() {
   return (
-    <View>
-      <Text>Buenos Días</Text>
-      <Texto />
-    </View>
+    <ScrollView> 
+      
+        <Texto />
+        <Cambio />
+    
+    </ScrollView>
   );
 }
