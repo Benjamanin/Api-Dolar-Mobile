@@ -11,7 +11,7 @@ Este proyecto fue creado con [Expo](https://expo.dev) usando [`create-expo-app`]
 ```bash
 npm install
 ```
-### 2️⃣ Instala Librerias:
+### 2️⃣ Instala expo-router:
 
    ```bash
     npm install expo-router
