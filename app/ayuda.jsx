@@ -1,12 +1,15 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import Texto from "../components/texto";
+import Steps from "../components/steps";
 
 export default function Ayuda() {    
     return (
-        <View>
-            <Text>weehgnsdhga</Text>
+        <ScrollView>
+            <Text>Pasos</Text>
+            <Steps/>
+
             <Texto />
-        </View>
+        </ScrollView>
     );
 }
