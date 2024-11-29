@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# 🌟 Bienvenido a la app Mobile de API Dolar 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este proyecto fue creado con [Expo](https://expo.dev) usando [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). ¡Prepárate para comenzar a desarrollar!
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 ¡Comienza ya!
+
+### 1️⃣ Instala las dependencias:
+
+```bash
+npm install
+```
+### 2️⃣ Instala expo-router:
 
    ```bash
-   npm install
+    npm install expo-router
    ```
 
-2. Start the app
+### 3️⃣ Inicia la aplicación:
+
+   Opción 1: Usando npx
+   
+   ```bash
+    npx expo start  
+
+   ```
+   Opción 2: Usando yarn
 
    ```bash
-    npx expo start
+    yarn install
+
+   ```
+   Opción 3: Si tienes Android Studio configurado:
+
+   ```bash
+    npm run android
+
    ```
 
-In the output, you'll find options to open the app in a
+## 🧹 ¿Necesitas un proyecto fresco?
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Cuando estés listo, ejecuta:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Este comando moverá el código inicial a la carpeta app-example y creará una nueva carpeta app lista para empezar desde cero.
 
-## Learn more
+## 👥 ¿Quiénes somos?
 
-To learn more about developing your project with Expo, look at the following resources:
+1. **Elias Soto**  
+2. **Martin Hernandez**  
+3. **Benjamin Leiva**  
+4. **Mauricio Huenchuan**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
