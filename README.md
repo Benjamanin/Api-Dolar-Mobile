@@ -50,8 +50,8 @@ Este comando moverá el código inicial a la carpeta app-example y creará una n
 
 ## 👥 ¿Quiénes somos?
 
-1. **Elias Soto**  
-2. **Martin Hernandez**  
-3. **Benjamin Leiva**  
-4. **Mauricio Huenchuan**
+**Elías Soto**  
+**Benjamin Leiva**  
+**Martin Hernandez**  
+**Mauricio Huenchuan**
 
