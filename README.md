@@ -1,4 +1,4 @@
-# 🌟 Bienvenido a la app Mobile de API Dolar 👋
+# 🌟 Bienvenido a la App Mobile de API Dolar 👋
 
 Este proyecto fue creado con [Expo](https://expo.dev) usando [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). ¡Prepárate para comenzar a desarrollar!
 
