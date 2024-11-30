@@ -1,12 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Titulo() {
+const monedasNombres = {
+  ARS: 'Peso Argentino',
+  USD: 'Dólar Estadounidense',
+  EUR: 'Euro',
+  BRL: 'Real Brasileño',
+  UYU: 'Peso Uruguayo',
+};
+
+export default function Titulo({monedaSeleccionada}) {
+
+  const nombreMoneda = monedasNombres[monedaSeleccionada] || 'moneda';
+
     return (
         <View
         style={styles.container}
         >
-            <Text style = {styles.text} >Convierta "Peso Argentino" a Peso chileno</Text>
+            <Text style={styles.text}>
+                Convierta {nombreMoneda} a Peso chileno
+            </Text>
         </View>
     );
 }

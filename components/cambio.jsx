@@ -18,12 +18,13 @@ export default function Cambio(
   const [fechaActualizacion, setFechaActualizacion] = useState(null);
   const [ultimoCierre, setUltimoCierre] = useState(null);
 
-  if (!data || !cotizaciones) {
-    return <Text>Cargando...</Text>;
-  }
-  if (error) {
-      return <Text>Error al cargar la API</Text>;
-  }
+  //VERIFICA SI LA API ESTA CARGANDO O SI HAY UN ERROR
+  // if (!data || !cotizaciones) {
+  //   return <Text>Cargando...</Text>;
+  // }
+  // if (error) {
+  //     return <Text>Error al cargar la API</Text>;
+  // }
       // Función para formatear la fecha en formato chileno
       const formatFechaChilena = (fecha) => {
         const date = new Date(fecha);

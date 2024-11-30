@@ -11,8 +11,8 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   const [cotizaciones, setCotizaciones] = useState([]);
-  const [monedaSeleccionada, setMonedaSeleccionada] = useState(null);
-  const [cantidad, setCantidad] = useState('');
+  const [monedaSeleccionada, setMonedaSeleccionada] = useState('ARS');
+  const [cantidad, setCantidad] = useState('1');
   const [resultado, setResultado] = useState(null);
 
   useEffect(() => {
@@ -62,8 +62,14 @@ const convertirMoneda = () => {
   return (
     <View> 
       
-        <Titulo />
-        <Banderas />
+        <Titulo 
+          monedaSeleccionada={monedaSeleccionada || ''}
+        />
+
+        <Banderas 
+          monedaSeleccionada={monedaSeleccionada || ''}
+        />
+
         <Cambio 
           data={data}
           error={error}
