@@ -1,33 +1,25 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function Steps() {
+export default function About() {
     return (
     <View style={styles.screen}>
       <View style={styles.infoBox}>
-        <Text style={styles.title}>Paso 1 </Text>
-        <Text style={styles.subtitle}>Ingresa la divisa</Text>
+        <Text style={styles.title}>Último Cierre </Text>
         <Text style={styles.description}>
-        Elige la moneda que deseas convertir a pesos chilenos.
+        El último cierre es el valor final al que una moneda se intercambió al final del último día hábil de operaciones en el mercado, y sirve como referencia clave para evaluar su rendimiento y tendencia futura.
         </Text>
       </View>
 
       <View style={styles.infoBox}>
-        <Text style={styles.title}>Paso 2</Text>
-        <Text style={styles.subtitle}>Ingresa la cantidad</Text>
+        <Text style={styles.title}>Fecha de Actualización</Text>
         <Text style={styles.description}>
-        Escribe la cantidad de dinero que deseas convertir. El conversor te mostrará el valor equivalente en pesos chilenos según la tasa de cambio actual.
+        La fecha de actualización indica el último momento en que cambió la cotización de la moneda en el mercado, reflejando su valor más reciente disponible.
         </Text>
       </View>
-      
-      <View style={styles.infoBox}>
-        <Text style={styles.title}>Paso 3</Text>
-        <Text style={styles.subtitle}>Presiona Convertir</Text>
-        <Text style={styles.description}>
-        Verifica la tasa de cambio y asegúrate de que estás satisfecho con el valor convertido.
-        </Text>
-      </View>
-      
+      <Text>{'\n'}</Text>
+      <Text>{'\n'}</Text>
+      <Text>{'\n'}</Text>
     </View>
       );
     }
@@ -59,13 +51,6 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         // color: 'rgba(130, 118, 97, 0.907)', 
         color: '#26b99a'
-    },
-    subtitle: {
-        fontSize: 18,
-        fontWeight: "600",
-        textAlign: "center",
-        marginBottom: 8,
-        color: '#555',  
     },
     description: {
         fontSize: 16,
