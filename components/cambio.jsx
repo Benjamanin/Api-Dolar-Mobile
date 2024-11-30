@@ -80,11 +80,11 @@ export default function Cambio(
               style={styles.picker}
               onValueChange={handleSelectChange}
             >
-                <Picker.Item label="PESO ARGENTINO (ARS)" value="ARS" color='blue' />
-                <Picker.Item label="DOLAR ESTADOUNIDENSE (USD)" value="USD" color='blue'/>
-                <Picker.Item label="EURO (EUR)" value="EUR" color='blue'/>
-                <Picker.Item label="REAL BRASILEÑO (BRL)" value="BRL" color='blue'/>
-                <Picker.Item label="PESO URUGUAYO (UYU)" value="UYU" color='blue'/>
+                <Picker.Item label="ARS" value="ARS" color='blue' />
+                <Picker.Item label="USD" value="USD" color='blue'/>
+                <Picker.Item label="EUR" value="EUR" color='blue'/>
+                <Picker.Item label="BRL" value="BRL" color='blue'/>
+                <Picker.Item label="UYU" value="UYU" color='blue'/>
             </Picker>
         </View>
         {/* Componentes Verdaderos para interactuar y mostrar datos de la API. */}
@@ -139,7 +139,7 @@ export default function Cambio(
 
           {/* Fecha Actualización del valor de la divisa. Resive un parametro de la Api en el monto. */}
           <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
-          $ <Text style={{ color: '#26b99a' }}>{fechaActualizacion}</Text> CLP
+          <Text style={{ color: '#26b99a' }}>{fechaActualizacion}</Text>
           </Text>
 
         </View>
