@@ -104,24 +104,6 @@ export default function Cambio() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Estilos
 const styles = StyleSheet.create({
   container: {

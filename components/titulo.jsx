@@ -7,7 +7,6 @@ export default function Titulo() {
         style={styles.container}
         >
             <Text style = {styles.text} >Convierta "Peso Argentino" a Peso chileno</Text>
-
         </View>
     );
 }

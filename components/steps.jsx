@@ -22,8 +22,6 @@ export default function Steps() {
 
     return (
 
-        //ERROR AL OCUPAR FLATLIST ESTO SE TIENE QUE SOLUCIONAR
-        //NO SE PUEDE OCUPAR FLATLIST SI TIENES LISTAS DENTRO DE UNA LISTA
         <FlatList
             data={data}
             renderItem={renderItem}
