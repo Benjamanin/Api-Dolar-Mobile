@@ -1,14 +1,61 @@
 import React, { useState } from 'react'; 
-import { View, TextInput, StyleSheet, Text, Image, Button, TouchableOpacity, Text as RNText } from 'react-native';
+import { View, TextInput, StyleSheet, Text, Image, TouchableOpacity, Text as RNText } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import Subtitulos from './Subtitulos';
 import dolar from '../icons/dolar.png';
 
-export default function Cambio() {
-  const [text, setText] = useState(''); // Para controlar el texto ingresado
-  const [selectedValue, setSelectedValue] = useState("java"); // Usado para controlar el valor seleccionado en el Picker
-  const handlePress = () => {
-    alert('¡Hola!');
+export default function Cambio(
+  {data,
+  error,
+  cotizaciones,
+  monedaSeleccionada,
+  cantidad,
+  resultado,
+  handleSelectChange,
+  handleInputChange,
+  convertirMoneda,
+}) {
+  const [fechaActualizacion, setFechaActualizacion] = useState(null);
+  const [ultimoCierre, setUltimoCierre] = useState(null);
+
+  if (!data || !cotizaciones) {
+    return <Text>Cargando...</Text>;
+  }
+  if (error) {
+      return <Text>Error al cargar la API</Text>;
+  }
+      // Función para formatear la fecha en formato chileno
+      const formatFechaChilena = (fecha) => {
+        const date = new Date(fecha);
+        if (isNaN(date.getTime())) {
+            console.error("Fecha inválida:", fecha);
+            return "Fecha inválida";
+        }
+        return date.toLocaleDateString('es-CL', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+    };
+
+    // Función para manejar el clic en el botón "Convertir"
+    const manejarFechaActualizacion = () => {
+      if (monedaSeleccionada) {
+          // Busca la cotización seleccionada por su código
+          const moneda = cotizaciones.find(c => c.moneda === monedaSeleccionada);
+          
+          
+          
+          if (moneda) {
+              // Establece la fecha de actualización formateada
+              setFechaActualizacion(formatFechaChilena(moneda.fechaActualizacion));
+              // Llama a la función de conversión para calcular el resultado
+              convertirMoneda();
+              setUltimoCierre(moneda.venta);
+          } else {
+              console.log("No se encontró la moneda seleccionada en las cotizaciones.");
+          }
+      }
   };
 
   return (
@@ -22,20 +69,22 @@ export default function Cambio() {
             <Image source={dolar} style={styles.iconDolar} />
             <TextInput
                 style={styles.input}
-                value={text} // Vincula el valor al estado
-                onChangeText={setText} // Actualiza el estado cada vez que el texto cambia
+                value={cantidad} // Vincula el valor al estado
+                onChangeText={handleInputChange} // Actualiza el estado cada vez que el texto cambia
                 placeholder='Cantidad'
+                keyboardType='numeric'
             />
 
             <Picker
-              selectedValue={selectedValue}
+              selectedValue={ monedaSeleccionada } // Vincula el valor al estado
               style={styles.picker}
-              onValueChange={(itemValue) => setSelectedValue(itemValue)}
+              onValueChange={handleSelectChange}
             >
-                <Picker.Item label="CLP" value="java" />
-                <Picker.Item label="ARG" value="javascript" />
-                <Picker.Item label="USD" value="python" />
-                <Picker.Item label="UYU" value="ruby" />
+                <Picker.Item label="PESO ARGENTINO (ARS)" value="ARS" color='blue' />
+                <Picker.Item label="DOLAR ESTADOUNIDENSE (USD)" value="USD" color='blue'/>
+                <Picker.Item label="EURO (EUR)" value="EUR" color='blue'/>
+                <Picker.Item label="REAL BRASILEÑO (BRL)" value="BRL" color='blue'/>
+                <Picker.Item label="PESO URUGUAYO (UYU)" value="UYU" color='blue'/>
             </Picker>
         </View>
         {/* Componentes Verdaderos para interactuar y mostrar datos de la API. */}
@@ -47,8 +96,7 @@ export default function Cambio() {
             <Image source={dolar} style={styles.IconDolarFalse} />
             <TextInput
                 style={styles.inputFalse}
-                value={text} // Vincula el valor al estado
-                onChangeText={setText} // Actualiza el estado cada vez que el texto cambia
+                value={resultado} // Vincula el valor al estado
                 placeholder='Convertido a'
                 editable={false}
 
@@ -69,12 +117,12 @@ export default function Cambio() {
 
           {/* Texto de Ultimo Cierre del valor de la divisa. Resive un parametro de la Api en el monto. */}
           <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
-          $ <Text style={{ color: '#26b99a' }}>76567</Text> CLP
+          $ <Text style={{ color: '#26b99a' }}>{ultimoCierre}</Text> CLP
           </Text>
 
         {/* Boton para Convertir divisas. */}
           <TouchableOpacity 
-            onPress={handlePress} 
+            onPress={manejarFechaActualizacion} 
             style={[styles.BotonConvertir, { borderRadius: 18 }]} 
           >
             <RNText style={{ color: '#228de9', fontWeight: 'bold', textAlign: 'center' }}>Convertir</RNText>
@@ -91,7 +139,7 @@ export default function Cambio() {
 
           {/* Fecha Actualización del valor de la divisa. Resive un parametro de la Api en el monto. */}
           <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>
-          $ <Text style={{ color: '#26b99a' }}>76567</Text> CLP
+          $ <Text style={{ color: '#26b99a' }}>{fechaActualizacion}</Text> CLP
           </Text>
 
         </View>
