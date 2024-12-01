@@ -20,6 +20,8 @@ export default function About() {
       <Text>{'\n'}</Text>
       <Text>{'\n'}</Text>
       <Text>{'\n'}</Text>
+      <Text>{'\n'}</Text>
+      
     </View>
       );
     }
