@@ -81,11 +81,11 @@ export default function Cambio(
               style={styles.picker}
               onValueChange={handleSelectChange}
             >
-                <Picker.Item label="ARS" value="ARS" color='blue' />
-                <Picker.Item label="USD" value="USD" color='blue'/>
-                <Picker.Item label="EUR" value="EUR" color='blue'/>
-                <Picker.Item label="BRL" value="BRL" color='blue'/>
-                <Picker.Item label="UYU" value="UYU" color='blue'/>
+                <Picker.Item label="ARS" value="ARS" color='#26b99a' />
+                <Picker.Item label="USD" value="USD" color='#26b99a'/>
+                <Picker.Item label="EUR" value="EUR" color='#26b99a'/>
+                <Picker.Item label="BRL" value="BRL" color='#26b99a'/>
+                <Picker.Item label="UYU" value="UYU" color='#26b99a'/>
             </Picker>
         </View>
         {/* Componentes Verdaderos para interactuar y mostrar datos de la API. */}

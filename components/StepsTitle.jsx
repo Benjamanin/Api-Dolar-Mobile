@@ -6,7 +6,7 @@ export default function StepsTitle() {
         <View
         style={styles.container}
         >
-            <Text style = {styles.text} >Pasos para convertir una divisa</Text>
+            <Text style = {styles.text} >Pasos para convertir una Divisa</Text>
 
         </View>
     );
@@ -18,12 +18,18 @@ const styles = StyleSheet.create({
       padding: 10,
       alignItems: 'center',
       justifyContent: 'center',
+      alignItems: 'center',
       margin: 11,
     },
     text: {
-      fontSize: 17,
-      color: '#26b99a',
+      fontSize: 30,
+      // color: '#26b99a',
+      color: 'gray', 
       //negrita
       fontWeight: 'bold',
+      alignItems: 'center',
+      alignContent: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
     },
   });

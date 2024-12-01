@@ -21,8 +21,9 @@ const styles = StyleSheet.create({
       margin: 11,
     },
     text: {
-      fontSize: 17,
+      fontSize: 30,
       color: '#26b99a',
+      color: 'gray', 
       //negrita
       fontWeight: 'bold',
     },

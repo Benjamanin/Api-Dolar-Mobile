@@ -14,6 +14,7 @@ export default function Titulo({monedaSeleccionada}) {
   const nombreMoneda = monedasNombres[monedaSeleccionada] || 'moneda';
 
     return (
+      //Se cambia el titulo cada vez que se selecciona una moneda
         <View
         style={styles.container}
         >

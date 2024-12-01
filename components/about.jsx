@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
         height: 190,
         borderWidth: 0.5,
         borderRadius: 20,
-        borderColor: '#ddd',  // Color de borde más suave
-        marginBottom: 30,  // Espaciado entre elementos
+        borderColor: '#ddd', 
+        marginBottom: 30,  
         padding: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginBottom: 10,
         // color: 'rgba(130, 118, 97, 0.907)', 
-        color: '#26b99a'
+        color: '#26b99a',
     },
     description: {
         fontSize: 16,
         textAlign: "center",
-        color: '#777',  // Color de descripción
+        color: '#777', 
     },
 });
