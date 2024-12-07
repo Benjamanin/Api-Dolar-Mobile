@@ -31,7 +31,7 @@ npm install
    Opción 2: Usando yarn
 
    ```bash
-    yarn install
+    yarn start
 
    ```
    Opción 3: Si tienes Android Studio configurado:
